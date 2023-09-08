@@ -15,7 +15,7 @@ function getCurrentUTCTime(){
   const currentDate = new Date()
   const milliseconds = currentDate.getUTCMilliseconds()
   
-  return milliseconds
+  return `${milliseconds}ms`
 }
 
 dayOfWeekElement.innerHTML = getCurrentDayOfWeek();
