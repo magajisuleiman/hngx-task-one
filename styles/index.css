@@ -35,7 +35,7 @@ time[data-testid="currentUTCTime"]{
 
 h3[data-testid="myTrack"]{
   display: inline;
- margin-left: 243px;
+
   font-size: 25px;
   text-decoration:underline
 }
