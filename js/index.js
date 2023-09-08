@@ -13,10 +13,9 @@ function getCurrentDayOfWeek(){
 //function to get current utc time 
 function getCurrentUTCTime(){
   const currentDate = new Date()
-  const milliseconds = currentDate.getUTCMilliseconds().toString().padStart(3, '0');
-
+  const milliseconds = currentDate.getUTCMilliseconds()
   
-  return `00:00:${milliseconds} UTC`;
+  return milliseconds
 }
 
 dayOfWeekElement.innerHTML = getCurrentDayOfWeek();
