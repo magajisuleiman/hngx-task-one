@@ -10,25 +10,14 @@ function getCurrentDayOfWeek(){
   return daysOfWeek[dayIndex];
 }
 
-//function to format time 
-function formatTime(hours, minutes, seconds) {
-  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-}
-
 //function to get current utc time 
-function updateTime(){
+function getCurrentUTCTime(){
   const currentDate = new Date()
-  const utcHours = currentDate.getUTCHours()
-  const utcMinutes = currentDate.getUTCMinutes()
-  const utcSeconds = currentDate.getUTCSeconds()
+  const milliseconds = currentDate.getUTCMilliseconds().toString().padStart(3, '0');
 
-  // Update the inner HTML of the elements with the current time
-  dayOfWeekElement.innerHTML = getCurrentDayOfWeek();
-  utcTimeElement.innerHTML = formatTime(utcHours, utcMinutes, utcSeconds);
   
+  return `00:00:${milliseconds} UTC`;
 }
 
-updateTime();
-
-// Update the time every second (1000 milliseconds)
-setInterval(updateTime, 1000);
+dayOfWeekElement.innerHTML = getCurrentDayOfWeek();
+utcTimeElement.innerHTML = getCurrentUTCTime();
