@@ -3,23 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hngx-task-one</title>
-
-  <link rel="stylesheet" href="/styles/index.css">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/mediaqueries.css">
 </head>
 <body>
-
-  <h1 data-testid="slackUserName">NAMELUS</h1>
-  <div>
-    <figure><img data-testid="slackDisplayImage" src="/img/PASSPORT1.jpg" alt="NAMELUS"></figure>
-    <h3 data-testid="myTrack">Frontend</h3>
-  </div>
-  <time data-testid="currentDayOfTheWeek"></time>
-  <time data-testid="currentUTCTime"></time>
-  <div>
-    <a data-testid="githubURL" rel="noopener" target="_blank" href="https://github.com/magajisuleiman/hngx-task-one" title="git-hub"><img src="/img/github-90.svg" alt="git-hub"></a>
-  </div>
-  
-  <script src="/js/index.js"></script>
+  <nav id="desktop-nav">
+    <div class="logo">Namelus</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Namelus</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section-container">
+      <img data-testid="slackDisplayImage" src="img/PASSPORT1.jpg" alt="namelus">
+    </div>
+    <div class="content">
+      <div class="section-text">
+        <p class="section-text-1">Hello, I'm</p>
+        <h1 data-testid="slackUserName" class="title">Namelus</h1>
+        <p data-testid="myTrack" class="section-text-2">Frontend Developer</p>
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-1">Contact Info</button>
+        <button class="btn btn-2">Download CV</button>
+      </div>
+      <div class="socials-container">
+        <a data-testid="githubURL" rel="noopener" target="_blank" href="https://github.com/magajisuleiman" title="git-hub"><img class="git-img" src="/img/github.svg" alt="git-hub"></a>
+        <a rel="noopener" target="_blank" href="https://github.com/magajisuleiman/hngx-task-one" title="git-hub"><img class="git-img" src="/img/likedin.svg" alt="git-hub"></a>
+      </div>
+        <time data-testid="currentDayOfTheWeek"></time>
+        <time data-testid="currentUTCTime"></time>
+      <div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-section">hngx - hero - page</footer>
+  <script src="/js/index..js"></script>
 </body>
 </html>
